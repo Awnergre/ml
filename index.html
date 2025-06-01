@@ -124,27 +124,6 @@
             pointer-events: none;
             transition: color 0.3s;
         }
-        .btn-jual-akun, .btn-joki-akun {
-            display: inline-block;
-            margin-left: 0;
-            padding: 9px 20px;
-            border-radius: 18px;
-            background: var(--opsi-btn-bg);
-            color: var(--opsi-btn-color);
-            font-size: 1em;
-            font-weight: 600;
-            border: none;
-            box-shadow: 0 2px 8px #b6e5ff44;
-            text-decoration: none;
-            transition: background 0.19s, box-shadow 0.15s, color 0.12s, transform 0.16s;
-        }
-        .btn-jual-akun:hover, .btn-jual-akun:focus,
-        .btn-joki-akun:hover, .btn-joki-akun:focus {
-            background: var(--opsi-btn-hover-bg);
-            color: var(--opsi-btn-hover-color);
-            box-shadow: 0 4px 14px #38b6ffbb;
-            transform: scale(1.07);
-        }
         .header-row {
             display: flex;
             align-items: center;
@@ -359,12 +338,6 @@
                 width: 100%;
                 max-width: 100%;
             }
-            .btn-jual-akun, .btn-joki-akun {
-                margin-left: 0;
-                margin-top: 0;
-                width: auto;
-                text-align: center;
-            }
             .brand-title {font-size: 1.05em;}
             .header-title { font-size: 1.15em;}
             .banner-wrapper {height: 200px;}
@@ -404,15 +377,11 @@
                     <input type="text" id="searchInput" placeholder="Cari game...">
                     <span class="icon">&#128269;</span>
                 </div>
-                <a href="https://wa.me/6282328581304" target="_blank" class="btn-jual-akun">Jual Akun</a>
-                <a href="https://wa.me/6282328581304" target="_blank" class="btn-joki-akun">Joki</a>
-                <a href="https://wa.me/6282328581304" target="_blank" class="btn-joki-akun">Lainnya</a>
-            </div>
         </div>
         <div class="header-row">
             <div>
-                <div class="header-title">Top Up Game Resmi, Murah & Cepat</div>
-                <div class="header-subtitle">Pilih game kesayanganmu dan lakukan top up dengan aman & mudah!</div>
+                <div class="header-title">  Top Up Game Resmi, Murah & Cepat</div>
+                <div class="header-subtitle">  Pilih game kesayanganmu dan lakukan top up dengan aman & mudah!</div>
             </div>
         </div>
         <div class="category-bar" id="categoryBar">
