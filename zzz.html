@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Top Up Mobile Legends Murah & Resmi | TopUpGim</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c9e7ff 100%);
+      margin: 0;
+      min-height: 100vh;
+      padding: 0;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #2196f3;
+      padding: 14px 6vw;
+      box-shadow: 0 3px 14px #2196f344;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      color: #fff;
+      font-size: 1.4em;
+      letter-spacing: 1px;
+      text-decoration: none;
+    }
+    .nav-logo img {
+      width: 32px; height:32px;
+      border-radius: 8px;
+      background: #e1f2ff;
+      box-shadow: 0 1px 8px #fff5;
+    }
+    .nav-links {
+      display: flex;
+      gap: 24px;
+    }
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1em;
+      padding: 6px 14px;
+      border-radius: 8px;
+      transition: background 0.14s, color 0.14s;
+      cursor: pointer;
+    }
+    .nav-links a:hover, .nav-links a.active {
+      background: #fff;
+      color: #2196f3;
+    }
+    .container {
+      max-width: 980px;
+      margin: 38px auto 0 auto;
+      padding: 30px 18px 36px;
+      border-radius: 26px;
+      background: #fff;
+      box-shadow: 0 4px 28px 0 #b6d6ff40;
+    }
+    .product-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 28px;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+    }
+    .product-image {
+      width: 180px;
+      height: 180px;
+      border-radius: 16px;
+      background: #e1f2ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 10px #b6e5ff33;
+      flex-shrink: 0;
+    }
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+      border-radius: 16px;
+    }
+    .product-info {
+      flex: 1 1 360px;
+      min-width: 240px;
+    }
+    .product-title {
+      font-size: 2em;
+      font-weight: 700;
+      color: #2196f3;
+      margin: 0 0 9px 0;
+      letter-spacing: 1px;
+    }
+    .product-category {
+      color: #5e81ac;
+      font-size: 1em;
+      font-weight: 500;
+      margin-bottom: 18px;
+    }
+    .product-description {
+      font-size: 1.1em;
+      color: #222;
+      margin-bottom: 18px;
+      line-height: 1.6;
+    }
+    /* -- ADD THIS FOR THE FLEX GROUP -- */
+    .input-flex-group {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      justify-content: flex-start;
+    }
+    .input-section {
+      background: #f1f8fd;
+      border-radius: 13px;
+      padding: 18px 18px 14px 18px;
+      margin-bottom: 32px;
+      max-width: 430px;
+      min-width: 260px;
+      flex: 1 1 330px;
+    }
+    .input-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+    .input-row label {
+      min-width: 90px;
+      font-weight: 600;
+      color: #184b8b;
+      font-size: 1em;
+      margin-right: 12px;
+    }
+    .input-row input {
+      flex: 1;
+      padding: 8px 12px;
+      border-radius: 8px;
+      border: 1.3px solid #b7dbfa;
+      font-size: 1em;
+      outline: none;
+      background: #fff;
+      color: #184b8b;
+      transition: border 0.2s;
+    }
+    .input-row input:focus {
+      border: 1.3px solid #2196f3;
+      background: #e3f2fd;
+    }
+    /* -- FOTO SAMPING INPUT -- */
+    .input-side-image {
+      width: 500px;
+      height: 131px;
+      border-radius: 15px;
+      object-fit: cover;
+      box-shadow: 0 2px 10px #b6e5ff44;
+      margin: 0 auto 18px auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px #b6e5ff44;
+  background: #fff;
+  border: 2px solid #e3f3ff;
+}
+    .divider {
+      border-top: 1.5px solid #b7dbfa;
+      margin: 28px 0 26px 0;
+    }
+    .section-title {
+      font-size: 1.15em;
+      font-weight: 700;
+      color: #184b8b;
+      margin-bottom: 14px;
+      letter-spacing: 1px;
+    }
+    .variant-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+      justify-content: center;
+      margin-bottom: 18px;
+    }
+    .variant-card {
+      background: #fafdff;
+      border-radius: 11px;
+      padding: 18px 16px 12px 16px;
+      box-shadow: 0 2px 14px #38b6ff13;
+      min-width: 150px;
+      max-width: 178px;
+      border: 2.5px solid #e3f3ff !important;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s, background 0.18s;
+      position: relative;
+      cursor: pointer;
+    }
+    .variant-card.selected,
+    .variant-card:hover {
+      transform: scale(1.06) translateY(-4px) rotate(-1deg);
+      border: 2.5px solid #2196f3 !important;
+      box-shadow: 0 8px 28px #38b6ff45, 0 1.5px 8px #b6e5ff55;
+      background: #fff;
+      z-index: 3;
+    }
+    .diamond-img {
+      width: 42px;
+      height: 42px;
+      object-fit: contain;
+      margin-bottom: 7px;
+      filter: drop-shadow(0 0 14px #38b6ff44);
+      transition: filter 0.18s;
+    }
+    .variant-card.selected .diamond-img,
+    .variant-card:hover .diamond-img {
+      filter: drop-shadow(0 0 20px #2196f3aa);
+    }
+    .variant-title {
+      font-weight: 600;
+      color: #184b8b;
+      margin-bottom: 7px;
+      font-size: 1em;
+      text-align: center;
+    }
+    .variant-price {
+      color: #2196f3;
+      font-weight: 700;
+      margin-bottom: 10px;
+      font-size: 1.1em;
+    }
+    .variant-card span {
+      position:absolute;
+      top:8px;
+      right:8px;
+      font-size:.87em;
+      font-weight:700;
+      padding:2px 10px;
+      border-radius:8px;
+      color:#fff;
+    }
+    .variant-card .favorit {background:#ffb300;}
+    .variant-card .bestdeal {background:#43b04a;}
+    .variant-card .promo {background:#2196f3;}
+    /* QR & Konfirmasi */
+    .qris-section {
+      background: #e7f6ff;
+      border-radius: 15px;
+      padding: 26px 18px 18px 18px;
+      margin: 28px 0 26px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .qr-label {
+      font-size: 1.14em;
+      font-weight: 600;
+      color: #184b8b;
+      margin-bottom: 13px;
+      text-align: center;
+    }
+    .qr-img {
+      width: 160px;
+      height: 160px;
+      object-fit: contain;
+      background: #f3f9ff;
+      margin-bottom: 18px;
+    }
+    .konfirmasi-btn {
+      padding: 12px 32px;
+      border-radius: 18px;
+      background: linear-gradient(90deg,#38b6ff 20%, #7ee8fa 100%);
+      color: #fff;
+      font-size: 1.13em;
+      font-weight: 700;
+      border: none;
+      box-shadow: 0 2px 8px #b6e5ff44;
+      transition: background 0.19s, color 0.12s, box-shadow 0.15s, transform 0.16s;
+      cursor: pointer;
+      letter-spacing: 1px;
+      margin-top: 8px;
+      width: 100%;
+      max-width: 300px;
+    }
+    .konfirmasi-btn:hover, .konfirmasi-btn:focus {
+      background: linear-gradient(90deg,#2196f3 10%, #7ee8fa 90%);
+      color: #184b8b;
+      box-shadow: 0 4px 14px #38b6ffbb;
+      transform: scale(1.03);
+    }
+    .howto-section {
+      background: #f1f8fd;
+      border-radius: 13px;
+      padding: 18px 18px 14px 18px;
+      margin-bottom: 26px;
+      font-size: 1em;
+      color: #184b8b;
+    }
+    .howto-section ol {
+      margin: 0 0 0 20px;
+      padding: 0;
+      color: #184b8b;
+    }
+    .info-section {
+      margin-bottom: 16px;
+    }
+    .info-section ul {
+      color: #184b8b;
+      margin: 0 0 0 20px;
+      padding: 0;
+    }
+    @media (max-width: 700px) {
+      nav {padding: 12px 3vw;}
+      .container {padding: 10px 2vw 18px;}
+      .product-header {flex-direction: column; align-items: center;gap:16px;}
+      .product-image {width: 120px; height: 120px;}
+      .product-title {font-size: 1.25em;}
+      .product-info {min-width: 0;}
+      .variant-list {gap:10px;}
+      .variant-card {min-width:98px;}
+      .diamond-img {width:28px;height:28px;}
+      .qr-img {width: 110px;height:110px;}
+      .qris-section {padding:14px;}
+      .input-flex-group {flex-direction: column;gap:12px;align-items:stretch;}
+      .input-side-image {margin-left:auto;margin-right:auto;}
+    }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav>
+    <a href="home.html" class="nav-logo" id="navHome">
+      <img src="https://img.icons8.com/color/96/shop--v1.png" alt="Zeen Market">
+      Zeen Market
+    </a>
+    <div class="nav-links">
+      <a href="home.html" id="navHomeLink">Home</a>
+      <a href="topup.html" class="active" id="navTopup">Top Up</a>
+      <a href="home.html" id="navAkun">Akun Game</a>
+      <a href="#" id="navJoki">Joki</a>
+      <a href="#" id="csNav">CS</a>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="product-header">
+      <div class="product-image">
+        <img src="zzz.png" alt="Zenless Zone Zero">
+      </div>
+      <div class="product-info">
+        <div class="product-title">Zenless Zone Zero</div>
+        <div class="product-category">Kategori: VIDIO GAMES, Android/iOS</div>
+        <div class="product-description">
+          Top up Monocrhome Zenless Zone Zero termurah, tercepat, dan resmi. Nikmati proses instan 24 jam, harga terbaik, dan pembayaran lengkap! Masukkan ID dan server Anda, pilih jumlah Diamond, dan nikmati pembelian tanpa ribet.
+        </div>
+      </div>
+    </div>
+    <!-- Input ID dan Server + FOTO SAMPING -->
+    <div class="input-flex-group">
+      <div class="input-section">
+        <form id="topupForm" autocomplete="off" onsubmit="return false;">
+          <div class="input-row">
+            <label for="userId">User ID</label>
+            <input type="text" id="userId" name="userId" maxlength="15" required placeholder="Masukan id dengan benar !">
+          </div>
+          <div class="input-row">
+            <label for="serverId">Server</label>
+            <input type="text" id="serverId" name="serverId" maxlength="5" required placeholder="Contoh : Server Asia">
+          </div>
+        </form>
+      </div>
+      <img class="input-side-image" src="baner.png" alt="Contoh User ID & Server">
+    </div>
+    <div class="divider"></div>
+    <div class="section-title">Pilih Jumlah Monocrhome</div>
+    <div class="variant-list" id="diamondList">
+      <div class="variant-card" data-variant="Weekly Diamond Pass">
+        <img class="diamond-img" src="WDP.png" alt="Diamond">
+        <div class="variant-title">Weekly Diamond Pass</div>
+        <div class="variant-price">Rp 28.000</div>
+        <span class="favorit">Favorit</span>
+      </div>
+      <div class="variant-card" data-variant="86 Diamond">
+        <img class="diamond-img" src="3.png" alt="Diamond">
+        <div class="variant-title">3 Diamond</div>
+        <div class="variant-price">Rp 20.000</div>
+        <span class="favorit">Favorit</span>
+      </div>
+      <div class="variant-card" data-variant="172 Diamond">
+        <img class="diamond-img" src="5.png" alt="Diamond">
+        <div class="variant-title">172 Diamond</div>
+        <div class="variant-price">Rp 40.000</div>
+        <span class="bestdeal">Best Deal</span>
+      </div>
+      <div class="variant-card" data-variant="344 Diamond">
+        <img class="diamond-img" src="karung.png" alt="Diamond">
+        <div class="variant-title">344 Diamond</div>
+        <div class="variant-price">Rp 80.000</div>
+      </div>
+<div class="variant-card" data-variant="344 Diamond">
+        <img class="diamond-img" src="karung.png" alt="Diamond">
+        <div class="variant-title">344 Diamond</div>
+        <div class="variant-price">Rp 80.000</div>
+      </div>
+      <div class="variant-card" data-variant="344 Diamond">
+        <img class="diamond-img" src="karung.png" alt="Diamond">
+        <div class="variant-title">344 Diamond</div>
+        <div class="variant-price">Rp 80.000</div>
+      </div>
+      <div class="variant-card" data-variant="344 Diamond">
+        <img class="diamond-img" src="karung.png" alt="Diamond">
+        <div class="variant-title">344 Diamond</div>
+        <div class="variant-price">Rp 80.000</div>
+      </div>
+      <div class="variant-card" data-variant="344 Diamond">
+        <img class="diamond-img" src="karung.png" alt="Diamond">
+        <div class="variant-title">344 Diamond</div>
+        <div class="variant-price">Rp 80.000</div>
+      </div>
+      <div class="variant-card" data-variant="344 Diamond">
+        <img class="diamond-img" src="karung.png" alt="Diamond">
+        <div class="variant-title">344 Diamond</div>
+        <div class="variant-price">Rp 80.000</div>
+      </div>
+      <div class="variant-card" data-variant="344 Diamond">
+        <img class="diamond-img" src="karung.png" alt="Diamond">
+        <div class="variant-title">344 Diamond</div>
+        <div class="variant-price">Rp 80.000</div>
+      </div>
+      <div class="variant-card" data-variant="344 Diamond">
+        <img class="diamond-img" src="karung.png" alt="Diamond">
+        <div class="variant-title">344 Diamond</div>
+        <div class="variant-price">Rp 80.000</div>
+      </div>
+      <div class="variant-card" data-variant="344 Diamond">
+        <img class="diamond-img" src="karung.png" alt="Diamond">
+        <div class="variant-title">344 Diamond</div>
+        <div class="variant-price">Rp 80.000</div>
+      </div>
+      <div class="variant-card" data-variant="344 Diamond">
+        <img class="diamond-img" src="karung.png" alt="Diamond">
+        <div class="variant-title">344 Diamond</div>
+        <div class="variant-price">Rp 80.000</div>
+      </div>
+      <div class="variant-card" data-variant="344 Diamond">
+        <img class="diamond-img" src="karung.png" alt="Diamond">
+        <div class="variant-title">344 Diamond</div>
+        <div class="variant-price">Rp 80.000</div>
+      </div>
+      <div class="variant-card" data-variant="344 Diamond">
+        <img class="diamond-img" src="karung.png" alt="Diamond">
+        <div class="variant-title">344 Diamond</div>
+        <div class="variant-price">Rp 80.000</div>
+      </div>
+      <div class="variant-card" data-variant="344 Diamond">
+        <img class="diamond-img" src="karung.png" alt="Diamond">
+        <div class="variant-title">344 Diamond</div>
+        <div class="variant-price">Rp 80.000</div>
+      </div>
+      <div class="variant-card" data-variant="344 Diamond">
+        <img class="diamond-img" src="karung.png" alt="Diamond">
+        <div class="variant-title">344 Diamond</div>
+        <div class="variant-price">Rp 80.000</div>
+      </div>
+      <div class="variant-card" data-variant="344 Diamond">
+        <img class="diamond-img" src="karung.png" alt="Diamond">
+        <div class="variant-title">344 Diamond</div>
+        <div class="variant-price">Rp 80.000</div>
+      </div>
+      <div class="variant-card" data-variant="344 Diamond">
+        <img class="diamond-img" src="karung.png" alt="Diamond">
+        <div class="variant-title">344 Diamond</div>
+        <div class="variant-price">Rp 80.000</div>
+      </div>
+      <div class="variant-card" data-variant="344 Diamond">
+        <img class="diamond-img" src="karung.png" alt="Diamond">
+        <div class="variant-title">344 Diamond</div>
+        <div class="variant-price">Rp 80.000</div>
+      </div>
+    </div>
+    <!-- QRIS Payment Section -->
+    <div class="qris-section">
+      <div class="qr-label">Pembayaran via QRIS</div>
+      <!-- Ganti src QR sesuai kebutuhan -->
+      <img class="qr-img" src="qr.png" alt="QRIS Pembayaran">
+      <button class="konfirmasi-btn" type="button" onclick="konfirmasiWA()">Konfirmasi ke WhatsApp</button>
+    </div>
+    <div class="divider"></div>
+    <div class="section-title">Cara Top Up</div>
+    <div class="howto-section">
+      <ol>
+        <li>Masukkan User ID dan Server Mobile Legends Anda.</li>
+        <li>Pilih nominal Diamond yang ingin dibeli.</li>
+        <li>Lakukan pembayaran dengan scan QRIS di atas.</li>
+        <li>Setelah membayar, klik tombol konfirmasi ke WhatsApp.</li>
+        <li>Diamond akan otomatis masuk ke akun Anda setelah pembayaran berhasil diverifikasi.</li>
+      </ol>
+    </div>
+    <div class="section-title">Informasi</div>
+    <div class="info-section">
+      <ul>
+        <li>Proses otomatis 1-3 menit, setelah mengirim bukti transfer.</li>
+        <li>Masukkan User ID dan Server dengan benar, kesalahan input bukan tanggung jawab kami.</li>
+        <li>Kontak CS WhatsApp: <a href="https://wa.me/6282328581304" target="_blank">+6282328581304</a></li>
+      </ul>
+    </div>
+  </div>
+  <script>
+    // Navbar links: pindah halaman sesuai html (prevent default untuk CS dan Joki saja)
+    document.getElementById('navHome').onclick = function(){ window.location.href = 'home.html'; };
+    document.getElementById('navHomeLink').onclick = function(){ window.location.href = 'home.html'; };
+    document.getElementById('navTopup').onclick = function(){ window.location.href = 'topup.html'; };
+    document.getElementById('navAkun').onclick = function(){ window.location.href = 'akun.html'; };
+    document.getElementById('navJoki').onclick = function(e){
+      e.preventDefault();
+      window.open('https://wa.me/6282328581304', '_blank');
+    };
+    document.getElementById('csNav').onclick = function(e){
+      e.preventDefault();
+      window.open('https://wa.me/6282328581304', '_blank');
+    };
+
+    // Pilihan WA tujuan
+    const WA_NUMBER = "6282328581304";
+    let selectedDiamond = "";
+
+    // Pilih diamond
+    const diamondCards = document.querySelectorAll('.variant-card');
+    diamondCards.forEach(card => {
+      card.addEventListener('click', function() {
+        diamondCards.forEach(c => c.classList.remove('selected'));
+        this.classList.add('selected');
+        selectedDiamond = this.getAttribute('data-variant');
+      });
+    });
+
+    // Konfirmasi WhatsApp dengan data otomatis
+    function konfirmasiWA() {
+      const userId = document.getElementById('userId').value.trim();
+      const serverId = document.getElementById('serverId').value.trim();
+      if (!userId || !serverId) {
+        alert("Silakan isi User ID dan Server Anda terlebih dahulu.");
+        document.getElementById('userId').focus();
+        return false;
+      }
+      if (!selectedDiamond) {
+        alert("Silakan pilih jumlah Diamond terlebih dahulu.");
+        return false;
+      }
+      const pesan = `Halo Admin,%0ASaya sudah melakukan pembayaran via QRIS.%0AProduk: *${selectedDiamond}*%0AUser ID: ${userId}%0AServer: ${serverId}%0A*sertakan bukti transfer di sini*%0Bnominal ga boleh kurang ya.`;
+      const waUrl = `https://wa.me/${WA_NUMBER}?text=${pesan}`;
+      window.open(waUrl, '_blank');
+    }
+  </script>
+</body>
