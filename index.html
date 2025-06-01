@@ -50,6 +50,7 @@
             transition: background 0.3s;
         }
         .container {
+            width: 100%;
             max-width: 1100px;
             margin: 38px auto 0 auto;
             padding: 28px 16px 36px;
@@ -188,7 +189,7 @@
             color: var(--category-active-color);
             border: 1.5px solid var(--category-active-border);
         }
-        /* --- Banner --- */
+        /* Banner */
         .banner-wrapper {
             width: 100%;
             position: relative;
@@ -315,10 +316,10 @@
             background: #a0cafc;
             border-radius: 6px;
         }
-        /* RESPONSIVE: HP dan PC SAMA */
+        /* RESPONSIVE: HP dan PC SAMA (grid, font, padding menyesuaikan, tidak berubah urutan/layout) */
         @media (max-width: 1200px) {
             .container {
-                max-width: 99vw;
+                max-width: 100vw;
             }
             .brand-header {
                 flex-wrap: wrap;
@@ -333,20 +334,24 @@
                 flex-wrap: wrap;
                 gap: 10px;
             }
+            .game-list {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 18px 8px;
+            }
         }
         @media (max-width: 700px) {
             .container {padding: 10px 0 10px;}
             .brand-header {
-                flex-direction: column;
-                align-items: flex-start;
+                flex-direction: row;
+                align-items: center;
                 gap: 7px 0;
             }
             .brand-actions {
-                flex-direction: column;
-                align-items: flex-start;
+                flex-direction: row;
+                align-items: center;
                 gap: 7px 0;
-                margin-left: 0;
-                width: 100%;
+                margin-left: auto;
+                width: auto;
             }
             .search-box {
                 margin-left: 0;
@@ -364,7 +369,7 @@
             .header-title { font-size: 1.15em;}
             .banner-wrapper {height: 200px;}
             .banner-dots {margin-top: 10px; margin-bottom: 10px;}
-            .header-row {flex-direction: column; align-items: flex-start;}
+            .header-row {flex-direction: row; align-items: center;}
             .game-list {gap: 15px 7px;}
             .game-card {padding: 14px 2px 16px;}
         }
