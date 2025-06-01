@@ -40,40 +40,6 @@
             --opsi-btn-hover-bg: linear-gradient(90deg,#2196f3 10%, #7ee8fa 90%);
             --opsi-btn-hover-color: #184b8b;
         }
-        body[data-theme="dark"] {
-            --bg-main: linear-gradient(135deg, #0b1e3b 0%, #133c7a 100%);
-            --container-bg: rgba(10,18,32,0.96);
-            --brand-logo-bg: #2D8CFF22;
-            --brand-title: #2D8CFF;
-            --brand-shadow: #133c7a55;
-            --header-title: #f1f5fa;
-            --header-subtitle: #a6b9d9;
-            --search-border: #223962;
-            --search-bg: #152642;
-            --search-color: #8fc7ff;
-            --search-focus-bg: #101b2c;
-            --search-focus-border: #2D8CFF;
-            --category-bg: #12223c;
-            --category-color: #8fc7ff;
-            --category-border: #223962;
-            --category-active-bg: #2D8CFF;
-            --category-active-color: #fff;
-            --category-active-border: #2D8CFF;
-            --banner-shadow: #2366D144;
-            --game-bg: #16294a;
-            --game-border: transparent;
-            --game-hover-bg: #222e55;
-            --game-title: #f1f5fa;
-            --btn-bg: linear-gradient(90deg,#2D8CFF 20%, #7EC6FF 90%);
-            --btn-color: #0A1120;
-            --btn-hover-bg: linear-gradient(90deg,#12223C 10%, #7EC6FF 90%);
-            --btn-hover-color: #fff;
-            --scrollbar-bg: #223962;
-            --opsi-btn-bg: linear-gradient(90deg,#2D8CFF 20%, #7EC6FF 90%);
-            --opsi-btn-color: #0A1120;
-            --opsi-btn-hover-bg: linear-gradient(90deg,#12223C 10%, #7EC6FF 90%);
-            --opsi-btn-hover-color: #fff;
-        }
         html, body {
             height: 100%;
         }
@@ -117,12 +83,19 @@
             letter-spacing: 1.5px;
             color: var(--brand-title);
             text-shadow: 0 2px 12px var(--brand-shadow);
-            margin-right: 18px;
+            margin-right: 8px;
+        }
+        .brand-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-left: auto;
+            flex-wrap: wrap;
         }
         .search-box {
-            flex: 1 1 220px;
-            max-width: 260px;
-            min-width: 160px;
+            flex: 0 1 220px;
+            max-width: 240px;
+            min-width: 140px;
             margin-left: 24px;
             position: relative;
         }
@@ -342,59 +315,13 @@
             background: #a0cafc;
             border-radius: 6px;
         }
-        .toggle-theme {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 14px;
-            float: right;
-            user-select: none;
-        }
-        .toggle-switch {
-            position: relative;
-            width: 44px;
-            height: 24px;
-        }
-        .toggle-switch input {
-            opacity: 0;
-            width: 0;
-            height: 0;
-        }
-        .slider {
-            position: absolute;
-            cursor: pointer;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: #b7dbfa;
-            border-radius: 24px;
-            transition: background 0.3s;
-        }
-        .slider:before {
-            position: absolute;
-            content: "";
-            height: 20px; width: 20px;
-            left: 2px; bottom: 2px;
-            background: #fff;
-            border-radius: 50%;
-            box-shadow: 0 2px 6px #bbb;
-            transition: transform 0.3s;
-        }
-        input:checked + .slider {
-            background: #184b8b;
-        }
-        input:checked + .slider:before {
-            transform: translateX(20px);
-            background: #2196f3;
-        }
-        .toggle-theme span {
-            font-size: 1em;
-            color: var(--category-color);
-            font-weight: 600;
-            letter-spacing: 0.1em;
-        }
         /* RESPONSIVE: HP dan PC SAMA */
         @media (max-width: 1200px) {
             .container {
                 max-width: 99vw;
+            }
+            .brand-header {
+                flex-wrap: wrap;
             }
         }
         @media (max-width: 900px) {
@@ -410,17 +337,22 @@
         @media (max-width: 700px) {
             .container {padding: 10px 0 10px;}
             .brand-header {
-                flex-direction: row;
-                flex-wrap: wrap;
-                gap: 7px 12px;
-                align-items: center;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 7px 0;
+            }
+            .brand-actions {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 7px 0;
+                margin-left: 0;
+                width: 100%;
             }
             .search-box {
                 margin-left: 0;
                 min-width: 120px;
                 width: 100%;
                 max-width: 100%;
-                order: 3;
             }
             .btn-jual-akun, .btn-joki-akun {
                 margin-left: 0;
@@ -456,25 +388,17 @@
 </head>
 <body>
     <div class="container">
-        <!-- TOGGLE BRIGHT/DARK MODE -->
-        <div class="toggle-theme">
-            <span id="themeLabel">Bright Mode</span>
-            <label class="toggle-switch">
-                <input type="checkbox" id="themeToggle">
-                <span class="slider"></span>
-            </label>
-        </div>
         <!-- BRAND HEADER, ZEEN MARKET + SEARCH BOX + JUAL AKUN + JOKI AKUN + LAINNYA -->
         <div class="brand-header">
             <div class="brand-logo">
                 <img src="https://img.icons8.com/color/96/shop--v1.png" alt="Zeen Market">
             </div>
             <span class="brand-title">Zeen Market</span>
-            <div class="search-box">
-                <input type="text" id="searchInput" placeholder="Cari game...">
-                <span class="icon">&#128269;</span>
-            </div>
-            <div style="display:flex; gap:6px; align-items:center; margin-left:18px; flex-wrap:wrap;">
+            <div class="brand-actions">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Cari game...">
+                    <span class="icon">&#128269;</span>
+                </div>
                 <a href="https://wa.me/6282328581304" target="_blank" class="btn-jual-akun">Jual Akun</a>
                 <a href="https://wa.me/6282328581304" target="_blank" class="btn-joki-akun">Joki</a>
                 <a href="https://wa.me/6282328581304" target="_blank" class="btn-joki-akun">Lainnya</a>
@@ -607,30 +531,6 @@
                     }
                 });
             });
-        });
-
-        // THEME TOGGLE
-        const themeToggle = document.getElementById('themeToggle');
-        const themeLabel = document.getElementById('themeLabel');
-        if (localStorage.getItem('theme') === 'dark') {
-            document.body.setAttribute('data-theme', 'dark');
-            themeToggle.checked = true;
-            themeLabel.innerText = "Dark Mode";
-        } else {
-            document.body.removeAttribute('data-theme');
-            themeToggle.checked = false;
-            themeLabel.innerText = "Bright Mode";
-        }
-        themeToggle.addEventListener('change', function() {
-            if (this.checked) {
-                document.body.setAttribute('data-theme', 'dark');
-                themeLabel.innerText = "Dark Mode";
-                localStorage.setItem('theme', 'dark');
-            } else {
-                document.body.removeAttribute('data-theme');
-                themeLabel.innerText = "Bright Mode";
-                localStorage.setItem('theme', 'bright');
-            }
         });
 
         // Filter kategori
