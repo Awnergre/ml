@@ -74,6 +74,9 @@
             --opsi-btn-hover-bg: linear-gradient(90deg,#12223C 10%, #7EC6FF 90%);
             --opsi-btn-hover-color: #fff;
         }
+        html, body {
+            height: 100%;
+        }
         body {
             font-family: 'Poppins', Arial, sans-serif;
             background: var(--bg-main);
@@ -218,7 +221,7 @@
             position: relative;
             margin-bottom: 18px;
             overflow: hidden;
-            height: 380px; /* Lebih tinggi */
+            height: 380px;
         }
         .banner-img {
             width: 100%;
@@ -246,13 +249,12 @@
             transform: translateX(-100%);
             transition: opacity 0.45s, transform 0.7s;
         }
-        /* Dots di bawah wrapper/banner */
         .banner-dots {
             width: 100%;
             display: flex;
             justify-content: center;
             gap: 8px;
-            margin-top: 24px; /* Jarak dari bawah gambar banner */
+            margin-top: 24px;
             margin-bottom: 18px;
             z-index: 10;
             pointer-events: auto;
@@ -340,29 +342,6 @@
             background: #a0cafc;
             border-radius: 6px;
         }
-        @media (max-width: 700px) {
-            .container {padding: 15px 3vw 19px;}
-            .brand-header {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 8px;
-            }
-            .search-box {
-                margin-left: 0;
-                width: 100%;
-                max-width: 100%;
-            }
-            .btn-jual-akun, .btn-joki-akun {
-                margin-left: 0;
-                margin-top: 8px;
-                width: 100%;
-                text-align: center;
-            }
-            .brand-title {font-size: 1em;}
-            .header-title { font-size: 1.3em;}
-            .banner-wrapper {height: 180px;}
-            .banner-dots {margin-top: 10px; margin-bottom: 10px;}
-        }
         .toggle-theme {
             display: flex;
             align-items: center;
@@ -411,6 +390,67 @@
             color: var(--category-color);
             font-weight: 600;
             letter-spacing: 0.1em;
+        }
+        /* RESPONSIVE: HP dan PC SAMA */
+        @media (max-width: 1200px) {
+            .container {
+                max-width: 99vw;
+            }
+        }
+        @media (max-width: 900px) {
+            .container {
+                max-width: 100vw;
+                padding: 18px 1vw 18px;
+            }
+            .brand-header {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+        }
+        @media (max-width: 700px) {
+            .container {padding: 10px 0 10px;}
+            .brand-header {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 7px 12px;
+                align-items: center;
+            }
+            .search-box {
+                margin-left: 0;
+                min-width: 120px;
+                width: 100%;
+                max-width: 100%;
+                order: 3;
+            }
+            .btn-jual-akun, .btn-joki-akun {
+                margin-left: 0;
+                margin-top: 0;
+                width: auto;
+                text-align: center;
+            }
+            .brand-title {font-size: 1.05em;}
+            .header-title { font-size: 1.15em;}
+            .banner-wrapper {height: 200px;}
+            .banner-dots {margin-top: 10px; margin-bottom: 10px;}
+            .header-row {flex-direction: column; align-items: flex-start;}
+            .game-list {gap: 15px 7px;}
+            .game-card {padding: 14px 2px 16px;}
+        }
+        @media (max-width: 520px) {
+            .container {
+                border-radius: 0;
+                margin: 0;
+                padding: 2vw 0 2vw;
+                min-width: 100vw;
+                max-width: 100vw;
+            }
+            .banner-wrapper {height: 120px;}
+            .brand-header {gap: 4px;}
+            .brand-title {font-size: .97em;}
+            .header-title {font-size: 1em;}
+            .category-bar {gap: 4px;}
+            .game-list {gap: 7px 3px;}
+            .game-card {padding: 6px 0 11px;}
         }
     </style>
 </head>
